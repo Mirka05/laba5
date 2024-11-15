@@ -1,75 +1,100 @@
-•	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ЕГЭ, немецкий язык, подготовка к ЕГЭ, учебные материалы, преподаватели, тарифы">
     <meta name="description" content="Сайт о подготовке к ЕГЭ по немецкому языку. Учебные материалы, информация о преподавателях и тарифах.">
-    <link rel="icon" type="image/png" href="/путь-к-фавикону/logo.png"> <!-- Ссылка на фавикон -->
+    <link rel="icon" type="image/png" href="Image/logo.png">
+    <link rel="stylesheet" href="styles.css">
     <title>Deutscher Traum</title>
+    <style>
+.tarifus-grid button {
+   background-color: #EE6213; 
+   color: #fff;
+   border: none; 
+   padding: 15px 50px; 
+   border-radius: 50px; 
+   cursor: pointer; 
+   font-family: 'krub', sans-serif; 
+   transition: background-color 0.3s ease; 
+  }
+  
+  .tarifus-grid button:hover {
+   background-color: #D95315; 
+  }
+    </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>DEUTSCHER TRAUM</h1>
-    <img src ="Image/logo.png "alt ="Logo">
-</div>
+  <header class="header">
+    <div class="logo">
+        <img src="Image/logo1.png" alt="Логотип">
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="prepodavateli.html">Преподаватели</a></li>
+            <li><a href="tarifu.html">Тарифы</a></li>
+            <li><a href="Poslednaya.html">О нас</a></li>
+        </ul>
+    </nav>
+</header>
 
-<div class="nav">
-    <a href="Index.html">Главная</a>
-    <a href="prepodavateli.html">Преподаватели</a>
-    <a href="tarifu.html">Тарифы</a>
-    <a href="Poslednaya.html">О нас</a>
-</div>
-    <div class="container">
-    <div class="content">
+<main>
+  <div class="container-tar">
+    <div class="content-tar">
       <h1>Групповые курсы</h1>
       <p>Минус 25% на покупку двух групповых курсов</p>
-      <p>Промокод <span class="promo">ЗНАНИЯ</span></p>
+      <p>Промокод <span class="promo" style="color: #ff5722;">ЗНАНИЯ</span></p>
       <p>Только до 15 октября</p>
       <p>Платите "Долями" - спросите менеджера, как воспользоваться.</p>
     </div>
     <img src="Image/flag.jpg" alt="Изображение">
   </div>
-<main>
-    <section class="tarifus">
-      <div class="container">
-        <h2>Наши тарифы</h2>
-        <p>Цены зависят от вашего уровня знаний, мы нацелены на качественное предоставление знаний!</p>
-        <div class="tarifus-grid">
-          <div class="tarifu-card">
-            <h3>Групповые курсы А1.1+А1.2</h3>
-              <p>Начните изучать немецкий с основ - идеальный курс для тех, кто никогда не учил немецкий или знает только алфавит. Вас ждут 24 тематических модуля, в которых мы разберем базовую грамматику, поможем расширить словарный запас и научим говорить без комплексов.</p>
-                <ul>
-                  <li>А1.1 + А1.2 = 19 800 ₽ 14 850 ₽</li>
-                  <li>Бесплатное участие в еженедельных разговорных и грамматических клубах.
-Платите “Долями”</li>
+
+  <div class="tarifus-grid">
+    <h3>Групповые курсы А1.1+А1.2</h3>
+    <p>Начните изучать немецкий с основ - идеальный курс для тех, кто никогда не учил немецкий или знает только алфавит. </br> Вас ждут 24 тематических модуля, в которых мы разберем базовую грамматику, поможем расширить словарный запас и научим говорить без комплексов.</p>
+    <ul>
+      <li>А1.1 + А1.2 = 19 800 ₽ 14 850 ₽</li>
+      <li>Бесплатное участие в еженедельных разговорных и грамматических клубах. Платите “Долями”</li>
     </ul>
-              </p>
-               <button>Записаться</button>
-          </div>
-             <div class="tarifus-grid">
-          <div class="tarifu-card">
-            <h3>Групповые курсы А2.1+А2.2</h3>
-              <p>Используйте немецкий уверенно в любых ситуациях Общайтесь с сокурсниками и преподавателем. Вас ждут 24 тематических модуля в прямом эфире, разговорная практика и творческие задания.</p>
-            <ul>
-                  <li>А2.1 + А2.2 = 19 800 ₽ 14 850 ₽</li>
-                  <li>Бесплатное участие в еженедельных разговорных и грамматических клубах. Платите “Долями”</li>
-    </ul>
-              </p>
-               <button>Записаться</button>
-          </div>
-          <div class="tarifus-grid">
-          <div class="tarifu-card">
-            <h3>Групповые курсы B1.1+B1.2</h3>
-              <p>Приступаем к изучению специфической лексики и начинаем обогащать нашу речь новой грамматикой. 24 интереснейших тематических модуля в прямом эфире для свободного общения на немецком языке.</p>
-            <ul>
-                  <li>B1.1 + B1.2 = 19 800 ₽ 14 850 ₽</li>
-                  <li>Бесплатное участие в еженедельных разговорных и грамматических клубах. Платите “Долями”</li>
-    </ul>
-              </p>
-               <button>Записаться</button>
-          </div>
+    <a href="forma.html">
+      <button>Записаться</button>
+    </a>
+  </div>
+
+    <div class="tarifus-grid">
+      <h3>Групповые курсы А2.1+А2.2</h3>
+      <p>Используйте немецкий уверенно в любых ситуациях Общайтесь с сокурсниками и преподавателем. </br> Вас ждут 24 тематических модуля в прямом эфире, разговорная практика и творческие задания.</p>
+      <ul>
+        <li>А2.1 + А2.2 = 19 800 ₽ 14 850 ₽</li>
+        <li>Бесплатное участие в еженедельных разговорных и грамматических клубах. Платите “Долями”</li>
+      </ul>
+      <a href="forma.html">
+        <button>Записаться</button>
+      </a>
+    </div>
+    
+    <div class="tarifus-grid">
+      <h3>Групповые курсы B1.1+B1.2</h3>
+      <p>Приступаем к изучению специфической лексики и начинаем обогащать нашу речь новой грамматикой. </br> 24 интереснейших тематических модуля в прямом эфире для свободного общения на немецком языке.</p>
+      <ul>
+        <li>B1.1 + B1.2 = 19 800 ₽ 14 850 ₽</li>
+        <li>Бесплатное участие в еженедельных разговорных и грамматических клубах. Платите “Долями”</li>
+      </ul>
+      <a href="forma.html">
+        <button>Записаться</button>
+      </a>
+    </div>
+  </div>
+</main>
+
+    <div class="footer">
+      <p>&copy; DEUTSCHER TRAUM, 2024 политика конфиденциальности </p >
+        <img src ="Image/logo.png "alt ="Logo">
+    </div>
+
 </body>
 </html>
-
