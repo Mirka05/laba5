@@ -436,4 +436,60 @@ form button:hover {
     height: auto; /* Автоматическая высота, сохраняющая пропорции */
 }
 
+@media (max-width: 414px) {
+    .content {
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    .logo img {
+        max-width: 400px;
+    }
+
+    .menu a {
+        font-size: 28px;
+        padding: 10px 10px;
+    }
+
+    .content img {
+        max-width: 55%;
+        margin-left: 30px;
+    }
+
+    .section-yellow {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+        .section-yellow h3 {
+            font-size: 28px;
+            margin-bottom: 28px;
+        }
+
+        .section-yellow table {
+            width: 100%;
+        }
+
+    .cta-section {
+        width: 90%;
+        margin-left: 0px;
+    }
+
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 28px;
+        }
+
+        .cta-section img {
+            width: 100%;
+            margin-right: 24px;
+        }
+
+        .cta-section button {
+            font-size: 16px;
+        }
+        .menu {
+            display:none;
+        }
+}
 
