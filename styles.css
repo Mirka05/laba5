@@ -95,8 +95,9 @@
 }
   
 .content img {
-    max-width: 100%;
+    max-width: 55%;
     height: auto;
+    margin-left: 30px;
 }
 
 .section-yellow {   
@@ -430,13 +431,108 @@ form button:hover {
     margin: 0; /* Удаляем отступы сверху и снизу */
     font-size: 14px; /* Размер шрифта */
 }
-   
-.footer img {
-    max-width: 100px; /* Максимальная ширина логотипа */
-    height: auto; /* Автоматическая высота, сохраняющая пропорции */
+
+    .footer img {
+        max-width: 100px; /* Максимальная ширина логотипа */
+        height: auto; /* Автоматическая высота, сохраняющая пропорции */
+    }
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
 }
 
+/* стилизуем кнопку */
+.menu__btn {
+    display: none; /* используем flex для центрирования содержимого */
+    align-items: center; /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition: 0.3s;
+    }
+
+        .menu__btn > span::before {
+            content: '';
+            top: -8px;
+        }
+
+        .menu__btn > span::after {
+            content: '';
+            top: 8px;
+        }
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: 0.3s;
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+
 @media (max-width: 414px) {
+   /*Первая*/
     .content {
         margin-left: 0px;
         width: 90%;
@@ -488,8 +584,141 @@ form button:hover {
         .cta-section button {
             font-size: 16px;
         }
-        .menu {
-            display:none;
-        }
-}
 
+    .menu {
+        display: none;
+    }
+
+    .menu__btn {
+        display: flex;
+    }
+/*Преподаватели*/
+.teachers-text {
+    margin-left: -20px; /* Убрали отступ полностью */
+  }
+  .teacher-cards {
+    margin-left: 0; /* Убрали отступ полностью */
+    margin-right: 0; /* Убрали отступ полностью */
+    justify-content: center; /* Центрируем карточки */
+  }
+  .teacher-card {
+    width: 100%; /* Карточки занимают всю ширину */
+  }
+/*Тарифы*/
+.container-tar {
+    flex-direction: column; /* Изменяем направление на столбчатое */
+    margin-left: 0; /* Убираем горизонтальные отступы */
+    width: 90%; /* Занимает всю ширину */
+    }
+.container-tar img {
+    max-width: 100%; /* Изображение занимает всю доступную ширину */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+    }
+.content-tar {
+    align-items: center; /* Центрируем содержимое */
+    text-align: center; /* Центрируем текст */
+    }
+.tarifus-grid{
+    width: 87%;
+    }
+/*Последняя*/
+.o-nas {
+    flex-direction: column; /* Изменяем направление на столбчатое */
+    margin-left: 0; /* Убираем отступ */
+    width: 100%; /* Занимает всю ширину */
+  }
+  .social-media {
+    flex-direction: column; /* Изменяем направление на столбчатое */
+    margin-left: 0; /* Убираем отступ */
+    width: 100%; /* Занимает всю ширину */
+  }
+.social-media img {
+    max-width: 85%;
+  }
+  .social-media-text{
+    text-align: center;
+    margin-left: -20px;
+  }
+  .o-nas img {
+    max-width: 85%;
+  }
+  .social-media p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1024px) {
+    /*Главная*/
+    .content {
+        margin-left: 20px;
+        flex-direction: column;
+        align-items: center;
+        max-width: 95%;
+      }
+      .content img {
+        margin-left: 0; 
+        max-width: 60%;
+        margin-top: 20px; 
+      }
+      .section-yellow {
+        margin-left: 2px;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+      }
+      .section-yellow table {
+        width: 100%; 
+      }
+      .cta-section {
+        margin-left: 20px;
+        width: 90%; 
+        flex-direction: column; 
+        align-items: center; 
+      }
+      .cta-section button{
+        margin-top: 20px;
+      }
+      form {
+        width: 90%; 
+      }
+    /*Преподаватели*/
+    .teachers-text {
+        margin-left: 0; /* Убираем отступ */
+        width: 90%;
+      }
+      .teacher-cards {
+        margin-left: 0; /* Убираем отступ */
+        margin-right: 0; /* Убираем отступ */
+        justify-content: center; /* Центрируем карточки */
+      }
+      .teacher-card {
+        width: 100%; /* Карточки занимают всю ширину */
+      }
+       /*Последняя*/
+       .o-nas {
+        margin-left: 20px; 
+        width: 90%; 
+        flex-direction: column;
+        justify-content: center; 
+      }
+      .o-nas img {
+        margin-bottom: 20px;
+        width: auto;
+      }
+        .o-nas-text{
+        text-align: center;
+      }
+      .social-media {
+        margin-left: 20px; 
+        width: 90%;
+        flex-direction: column; 
+        justify-content: center; 
+    
+      }
+      .social-media img {
+        margin-bottom: 20px; 
+        width: auto;
+      }
+      .social-media-text{
+        text-align: center;
+      }
+
+}
